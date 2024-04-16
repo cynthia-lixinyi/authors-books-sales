@@ -9,6 +9,10 @@ server.use(cors());
 server.use(helmet());
 server.use(express.json());
 
+server.get("/message", (req, res) => {
+  res.json({ message: "Hello from server!" });
+});
+
 server.get('/', (req, res) => {
   res.send('Welcome to the authors-books-sales app server!');
 })
