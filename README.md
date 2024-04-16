@@ -1,16 +1,15 @@
 # authors-books-sales
 
 Run `node --version` to make sure node.js is installed <br>
-`cd server` and run `node index.js` to see the API server
-
 
 ### Part 1
 Check the `part1_queries.sql` file, which is directly under this repo folder
 
 ### Part 2
+`cd server` and run `node index.js` to see the API server
 #### Part 2A
-If we want to give the optional query author_name a value...<br>
-Example: http://localhost:8888/top-10-authors?auth_name=Sophia%20Thomas case insensitive. http://localhost:8888/top-10-authors?auth_name=sophia%20thomas also return the same JSON payload.<br>
+The url `localhost:8888/top-10-authors` gives a response containing all top 10 performing authors
+If we want to give a value to the optional query author_name, add `?author_name={value}` after the url `localhost:8888/top-10-authors`. For example: `http://localhost:8888/top-10-authors?auth_name=Sophia%20Thomas` The input author name is case insensitive, so `http://localhost:8888/top-10-authors?auth_name=sophia%20thomas` also return the same JSON payload.<br>
 Note that don't put quotes around the value of the query parameter.<br>
 It's okay to replace %20 as a white space in the url.<br>
 #### Part 2B
