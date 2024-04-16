@@ -16,7 +16,7 @@ It's okay to replace %20 as a white space in the url.<br>
 `async` and `await` are used to optimize the performance of the API endpoint
 
 ### Part 3
-`cd server` and run `node index.js`, keep this terminal running<br>
+`cd client` and run `node index.js`, keep this terminal running<br>
 Open a new terminal, `cd client` and run `npm start`. The frontend of this API should show up in the browser.
 
 ### Reference
