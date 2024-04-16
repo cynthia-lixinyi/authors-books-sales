@@ -6,11 +6,11 @@ function Author({ author }) {
   return (
     <div className="author">
       <div className="left">
-        <AccountCircleIcon />
+      <AccountCircleIcon style={{ fontSize: '2.5rem' }} />
       </div>
       <div className="right">
-        <p>{author.author_name}</p>
-        <p>Email: {author.email}</p>
+        <p className='thick'>{author.author_name}</p>
+        <p>{author.email}</p>
       </div>
     </div>
   );

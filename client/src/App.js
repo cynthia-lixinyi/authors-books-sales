@@ -22,7 +22,7 @@ function App() {
     <div className="App">
       <div className="frame">
         <div className="title">
-          <p>Top 10 Performing Authors</p>
+          <p className="thick">Top 10 Performing Authors</p>
         </div>
         <div className="body">
           {error && <p className="error">{error}</p>}

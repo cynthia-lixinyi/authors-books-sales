@@ -4,7 +4,7 @@
   align-items: center;
   justify-content: center;
   margin: 35px auto;
-  width: 40%;
+  width: 30%;
   box-shadow: 0px 0px 5px rgb(0, 0, 0, 0.5);
 
 }
@@ -12,5 +12,15 @@
 .body {
   align-items: center;
   width: 95%;
-  padding: 5%;
+  padding-left: 2%;
+  padding-right: 2%;
 }
+
+p.thick {
+  font-weight: bold;
+}
+
+p {
+  font-weight: lighter;
+}
+
