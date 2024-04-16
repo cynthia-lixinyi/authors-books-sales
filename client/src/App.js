@@ -7,10 +7,10 @@ function App() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    fetch("http://localhost:8888/top-10-authors")
+    fetch('http://localhost:8888/top-10-authors')
       .then((res) => {
         if (!res.ok) {
-          throw new Error("Failed to fetch data");
+          throw new Error('Failed to fetch data');
         }
         return res.json();
       })
@@ -19,13 +19,13 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
-      <div className="frame">
-        <div className="title">
-          <p className="thick">Top 10 Performing Authors</p>
+    <div className='App'>
+      <div className='frame'>
+        <div className='title'>
+          <p className='thick'>Top 10 Performing Authors</p>
         </div>
-        <div className="body">
-          {error && <p className="error">{error}</p>}
+        <div className='body'>
+          {error && <p className='error'>{error}</p>}
           {topAuthors.map((author) => (
             <Author key={author.id} author={author} />
           ))}
