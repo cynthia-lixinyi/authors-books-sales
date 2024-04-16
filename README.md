@@ -1,6 +1,6 @@
 # authors-books-sales
 
-Run `node --version` to see if node is installed or not <br>
+Run `node --version` to make sure node.js is installed <br>
 `cd server` and run `node index.js` to see the API server
 
 
