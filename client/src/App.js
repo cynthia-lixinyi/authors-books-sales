@@ -20,14 +20,16 @@ function App() {
 
   return (
     <div className="App">
-      <div className="title">
-        <p>Top 10 Performing Authors</p>
-      </div>
-      <div className="body">
-        {error && <p className="error">{error}</p>}
-        {topAuthors.map((author) => (
-          <Author key={author.id} author={author} />
-        ))}
+      <div className="frame">
+        <div className="title">
+          <p>Top 10 Performing Authors</p>
+        </div>
+        <div className="body">
+          {error && <p className="error">{error}</p>}
+          {topAuthors.map((author) => (
+            <Author key={author.id} author={author} />
+          ))}
+        </div>
       </div>
     </div>
   );

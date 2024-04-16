@@ -1,8 +1,9 @@
 .author {
   display: flex;
-  align-items: left;
+  border: 0;
   padding: 10px;
-  border-bottom: 1px solid #ccc;
+  align-items: center;
+  border-bottom: 1px solid #e8e8e8;
 }
 
 .author h2 {
