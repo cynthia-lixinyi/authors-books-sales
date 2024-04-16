@@ -1,0 +1,25 @@
+.author {
+  display: flex;
+  align-items: left;
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+
+.author h2 {
+  margin: 0;
+  margin-left: 10px;
+}
+
+.author p {
+  margin: 0;
+}
+
+.author-info {
+  flex-grow: 1;
+  margin-left: 10px;
+}
+
+.MuiSvgIcon-root {
+  width: 48px;
+  height: 48px;
+}

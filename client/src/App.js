@@ -1,5 +1,6 @@
-import React, { useState, useEffect } from "react";
-import "./App.css";
+import React, { useState, useEffect } from 'react';
+import './App.css';
+import Author from './components/Author';
 
 function App() {
   const [topAuthors, setTopAuthors] = useState([]);
@@ -19,17 +20,15 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Top 10 Authors</h1>
-      {error && <p className="error">{error}</p>}
-      <ul>
+      <div className="title">
+        <p>Top 10 Performing Authors</p>
+      </div>
+      <div className="body">
+        {error && <p className="error">{error}</p>}
         {topAuthors.map((author) => (
-          <li key={author.id}>
-            <span>{author.author_name}</span>
-            <span>{author.email}</span>
-            <span>Sales Revenue: {author.sales_revenue}</span>
-          </li>
+          <Author key={author.id} author={author} />
         ))}
-      </ul>
+      </div>
     </div>
   );
 }
