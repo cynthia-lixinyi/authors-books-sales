@@ -9,7 +9,7 @@ Check the `part1_queries.sql` file, which is directly under this repo folder
 `cd server` and run `node index.js` to see the API server
 #### Part 2A
 The url `localhost:8888/top-10-authors` gives a response containing all top 10 performing authors
-If we want to give a value to the optional query author_name, add `?author_name={value}` after the url `localhost:8888/top-10-authors`.
+If we want to give a value to the optional query author_name, add `?author_name={value}` after the url `localhost:8888/top-10-authors`.<br>
 For example: `http://localhost:8888/top-10-authors?auth_name=Sophia%20Thomas` 
 The input author name is case insensitive, so `http://localhost:8888/top-10-authors?auth_name=sophia%20thomas` also return the same JSON payload.<br>
 Note that don't put quotes around the value of the query parameter.<br>
