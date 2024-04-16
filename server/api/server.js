@@ -17,7 +17,7 @@ async function getTopTenAuthors(authorName) {
   let query = db('authors')
     .leftJoin('books', 'authors.id', 'books.author_id')
     .leftJoin('sale_items', 'books.id', 'sale_items.book_id')
-    .select('authors.id', 'authors.author_name')
+    .select('authors.id', 'authors.author_name', 'authors.email')
     .sum({ sales_revenue: db.raw('sale_items.quantity * sale_items.item_price') })
     .groupBy('authors.id')
     .orderByRaw('SUM(sale_items.quantity * sale_items.item_price) DESC')

@@ -1,0 +1,20 @@
+.author {
+  display: flex;
+  border: 0;
+  padding: 10px;
+  align-items: center;
+  border-bottom: 1px solid #e8e8e8;
+}
+
+.author p {
+  margin: 0;
+}
+
+.left {
+  width: 15%;
+}
+
+.right {
+  flex: 1;
+}
+
