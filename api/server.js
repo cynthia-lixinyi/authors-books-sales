@@ -1,6 +1,7 @@
 const express = require('express');
 const cors = require('cors');
-const helmet = require('helmet')
+const helmet = require('helmet');
+const db = require('./dbConfig');
 
 const server = express();
 
@@ -12,8 +13,21 @@ server.get('/', (req, res) => {
   res.send('Welcome to the authors-books-sales app server!');
 })
 
-server.get('/top-10-authors', (req, res) => {
-  res.send('Here are the top 10 performing authors');
+// Get all top 10 performing authors
+server.get('/top-10-authors', async (req, res) => {
+  try {
+    const topAuthors = await db('authors')
+      .leftJoin('books', 'authors.id', 'books.author_id')
+      .leftJoin('sale_items', 'books.id', 'sale_items.book_id')
+      .select('authors.id', 'authors.author_name')
+      .sum({ sales_revenue: db.raw('sale_items.quantity * sale_items.item_price') })
+      .groupBy('authors.id')
+      .orderByRaw('SUM(sale_items.quantity * sale_items.item_price) DESC')
+      .limit(10);
+    res.json(topAuthors);
+  } catch (err) {
+    console.log(err);
+  }
 })
 
 module.exports = server;
