@@ -34,6 +34,4 @@ Note:
 },
 </code></pre>
 
-#### Link to the deployed web page
-
 
